@@ -4,7 +4,7 @@ import { Model, FunctionFactory, Question } from 'survey-core';
 import { SurveyModule } from 'survey-angular-ui';
 import * as SurveyTheme from "survey-core/themes";
 import { toNumber } from './shared/utils/general'
-
+import "survey-core/survey-core.min.css";
 
 export enum ProjectId { A = 1, B = 2, C = 3 }
 export enum CategoryId { A = 1, B = 2, C = 3 }
@@ -16,8 +16,8 @@ export interface ProjectRow {
 }
 
 type FnContext = {
-  question?: Question;     // question.survey is ISurvey
-  survey?: unknown;        // can be ISurvey or Model; we'll narrow to SurveyLike
+  question?: Question;
+  survey?: unknown;
 };
 
 // Only the method we actually use
